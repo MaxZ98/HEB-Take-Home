@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# ATM Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This is a simple ATM application built with React and TypeScript. It allows users to log in with a PIN, view their account balance, make deposits, withdraw money, and ensures that users do not exceed their daily withdrawal limit.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (version 14 or later)
+- npm (version 6 or later)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+Follow these steps to get the application up and running on your local machine.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### 1. Clone the Repository
+
+First, clone the repository to your local machine using Git.
+
+### 2. Navigate to Project Directory
+
+Second, CD into the project directory
+
+```bash
+cd your-repo-name
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 3. Install Dependencies
+
+Third, insatll all necessary dependencies by running
+
+```bash
+npm i
+```
+
+### 4. Run the Application
+
+Start the development server by running
+
+```bash
+npm run dev
+```
