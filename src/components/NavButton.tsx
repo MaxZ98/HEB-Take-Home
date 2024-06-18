@@ -3,16 +3,18 @@ import { useNavigate } from "react-router-dom";
 import useATM from "../hooks/useATM";
 
 type OptionButtonProps = {
-  service: "Withdraw" | "Deposit" | "Exit";
+  service: "Withdraw" | "Deposit" | "Exit" | "Home";
 };
 
-const OptionButton = ({ service }: OptionButtonProps) => {
+const NavButton = ({ service }: OptionButtonProps) => {
   const { setCurrentUser } = useATM();
   const navigate = useNavigate();
 
   const handleService = () => {
     if (service === "Exit") {
       setCurrentUser(null);
+    } else if (service === "Home") {
+      navigate("/");
     } else {
       navigate(`/${service}`);
     }
@@ -20,7 +22,9 @@ const OptionButton = ({ service }: OptionButtonProps) => {
 
   return (
     <Button
-      variant={service === "Exit" ? "contained" : "outlined"}
+      variant={
+        service === "Exit" || service === "Home" ? "contained" : "outlined"
+      }
       onClick={handleService}
     >
       {service}
@@ -28,4 +32,4 @@ const OptionButton = ({ service }: OptionButtonProps) => {
   );
 };
 
-export default OptionButton;
+export default NavButton;
